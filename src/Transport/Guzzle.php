@@ -177,7 +177,7 @@ class Guzzle extends AbstractTransport
                 'scheme' => $this->_scheme,
                 'host' => $connection->getHost(),
                 'port' => $connection->getPort(),
-                'path' => \ltrim('/', $connection->getPath()),
+                'path' => \ltrim($connection->getPath(), '/'),
             ]);
         }
 
